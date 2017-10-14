@@ -1,10 +1,15 @@
 
 const ExpressWrapper = require('./lib/ExpressWrapper.js')
-const ContentProvider = require('./lib/ContentProvider.js')
 
-var contentProvider = new ContentProvider(process.cwd())
-var server = new ExpressWrapper(contentProvider, require('./lib/controllers/views/NotFoundViewController.js'))
+function requireController(path) {
+    let controllerClass = require(path)
+    return new controllerClass()
+}
 
-server.viewController(require('./lib/controllers/views/AdminLoginViewController.js'))
+var server = ExpressWrapper.builder()
+    .withContentPath(process.cwd())
+    .with404Controller(requireController('./lib/controllers/views/NotFoundViewController.js'))
+    .with500Controller(requireController('./lib/controllers/views/ServerErrorViewController.js'))
+    .build()
 
 server.run()
