@@ -10,6 +10,8 @@ var server = ExpressWrapper.builder()
     .withContentPath(process.cwd())
     .with404('notfound.html')
     .with500('internalerror.html')
+    .addStaticView('/adminlogin', 'adminlogin.html')
+    .addView('/admin', requireController('./lib/controllers/views/AdminViewController.js'))
     .build()
 
 server.run()
