@@ -7,7 +7,8 @@
         background-attachment: fixed;
         background-position: center;
         min-width: 100%;
-        min-height: 100%;}
+        min-height: 100%;
+        background-image:url("/static/images/people.jpg")}
       div.transbox {
           margin: 30px;
           background-color: black;
@@ -57,11 +58,11 @@ div{text-align: center;}
 form {color: white;}
     </style>
   </head>
-  <body background="/static/images/people.jpg">
+  <body>
   <div class="transbox">
     <br>
    <img src="/static/images/hireme.png"></img>
-  <h1>Administrator Login</h1>
+  <h1>Applicant Login</h1>
     <nav class="left">
     <h2>Register Now!</h2>
     <form>
@@ -70,7 +71,7 @@ form {color: white;}
       Email Address: <input type="email" name="email"><br><br>
       Phone Number: <input type="Number" name="number"><br><br>
       Create a Password: <input type="password" name="password"><br><br>
-      <input type="submit" name="submit">
+      <input type="submit" formaction="/static/html/careers.html" name="submit">
     </form>
   </nav> 
 
@@ -79,7 +80,7 @@ form {color: white;}
   <form>
   Email Address: <input type="email" name="email"><br><br>
   Password: <input type="password" name="password"><br><br>
-  <input type="submit" name="submit">
+  <input type="submit" formaction="/static/html/careers.html" name="submit">
 </form>
   </nav>
     <br>
