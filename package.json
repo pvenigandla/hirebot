@@ -12,7 +12,12 @@
     "botbuilder": "^3.11.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+<<<<<<< HEAD
     "handlebars": "^4.0.10",
     "path": "^0.12.7"
+=======
+    "fs-extra": "^4.0.2",
+    "handlebars": "^4.0.10"
+>>>>>>> b94be7846dd8719dad6c268dddae882626540c83
   }
 }
