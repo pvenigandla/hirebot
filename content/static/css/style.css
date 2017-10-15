@@ -54,6 +54,7 @@ input[type=text]:focus {
 
 .search {
     margin: 20px auto;
+    margin-bottom: 40px;
     width: 500px;
 }
 
