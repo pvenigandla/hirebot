@@ -1,4 +1,3 @@
-
 const ExpressWrapper = require('./lib/ExpressWrapper.js')
 
 function requireController(path) {
@@ -13,7 +12,8 @@ var server = ExpressWrapper.builder()
     .with500('html/internalerror.html')
     .addStaticView('/adminlogin', 'html/adminlogin.html')
     .addStaticView('/applicantlogin', 'html/applicantlogin.html')
-    .addStaticView('/', 'html/index.html')
+    // .addStaticView('/', 'html/index.html')
+    .addView('/', requireController('./lib/controllers/views/CareersViewController.js'))
     .addView('/admin', requireController('./lib/controllers/views/AdminViewController.js'))
     .addView('/careers', requireController('./lib/controllers/views/CareersViewController.js'))
     .build()

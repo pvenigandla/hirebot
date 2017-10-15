@@ -1,0 +1,104 @@
+/* .header{
+    background-color: #333;
+    overflow: hidden;
+}
+
+img {
+    width: 15%;
+    height:15%;
+}
+
+.header a {
+    float:right;	
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 5px;
+
+}
+
+.search{}
+
+.careers{}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+
+a {
+    color: white;
+
+}
+
+h1 {
+    text-align: center;
+
+}
+
+input[type=text]:focus {
+    width: 100%;
+} */
+
+#chatbot {
+    height: 400px;
+    position: fixed;
+    bottom: 100px;
+    right: 70px;
+}
+
+.search {
+    margin: 20px auto;
+    width: 500px;
+}
+
+.search-submit {
+    width: 75px;
+}
+
+.search-input {
+    width: 100%;
+}
+
+.wc-header {
+    background-color: #c82333 !important;
+}
+
+.career-header {
+    margin-top: 20px;
+}
+
+.career-list-item {
+    background: #f3f3f3;
+    height: 140px;
+    width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    position: relative;
+}
+
+.career-list-item:hover {
+    background: #eee;
+}
+
+.career-list-location {
+
+}
+
+.career-list-title {
+    font-weight: bold;
+    font-size: 1.35em;
+}
+
+.career-list-button {
+    align: right;
+    margin-top: 10px;
+    position: absolute;
+    right:45px;
+    bottom: 15px;
+}
