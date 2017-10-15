@@ -1,9 +1,16 @@
 const ExpressWrapper = require('./lib/ExpressWrapper.js')
-const ContentProvider = require('./lib/ContentProvider.js')
 
-var contentProvider = new ContentProvider(process.cwd())
-var server = new ExpressWrapper(contentProvider, require('./lib/controllers/views/NotFoundViewController.js'))
+function requireController(path) {
+    let controllerClass = require(path)
+    return new controllerClass()
+}
 
-server.viewController(require('./lib/controllers/views/AdminLoginViewController.js'))
+var server = ExpressWrapper.builder()
+    .withContentPath(process.cwd())
+    .with404('notfound.html')
+    .with500('internalerror.html')
+    .addStaticView('/adminlogin', 'adminlogin.html')
+    .addView('/admin', requireController('./lib/controllers/views/AdminViewController.js'))
+    .build()
 
 server.run()
