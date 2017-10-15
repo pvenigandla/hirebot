@@ -1,4 +1,3 @@
-
 const ExpressWrapper = require('./lib/ExpressWrapper.js')
 const ContentProvider = require('./lib/ContentProvider.js')
 
